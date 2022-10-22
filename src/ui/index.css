@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  /* Base colors */
+  --base-color: #212121;
+  --base-color-a: #666666;
+  --base-color-b: #e0e0e0;
+  --base-color-c: #f7f7f7;
+  --base-color-d: #ffffff;
+
+  /* Type colors */
+
+  --type-rock: #b69e31;
+  --type-ghost: #70559b;
+  --type-steel: #b7b9d0;
+  --type-water: #6493eb;
+  --type-grass: #74cb48;
+  --type-psychic: #fb5584;
+  --type-ice: #9ad6df;
+  --type-dark: #75574c;
+  --type-fairy: #e69eac;
+  --type-normal: #aaa67f;
+  --type-fighting: #c12239;
+  --type-flying: #a891ec;
+  --type-poison: #a43e9e;
+  --type-ground: #dec16b;
+  --type-bug: #a7b723;
+  --type-fire: #f57d31;
+  --type-electric: #f9cf30;
+  --type-dragon: #7037ff;
+
+  /* Spaces */
+  --spaces-xxs: 0.4rem;
+  --spaces-xs: 0.8rem;
+  --spaces-s: 1.6rem;
+  --spaces-m: 2.4rem;
+  --spaces-l: 3.2rem;
+  --spaces-xl: 4rem;
+  --spaces-xxl: 4.8rem;
+
+  /* Shadows */
+  --shadow-a: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html,
+body {
+  color: var(--base-color);
+  background-color: var(--base-color-c);
+
+  min-height: 100%;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+strong,
+input {
+  font-size: 1.6rem;
+  margin: 0;
+}
