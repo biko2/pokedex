@@ -4,6 +4,7 @@
 
   color: var(--base-color-d);
   border-radius: var(--spaces-s);
+  font-weight: var(--font-weight-bold);
 
   font-size: 1.2rem;
   line-height: 1.6rem;

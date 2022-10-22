@@ -1,0 +1,94 @@
+.cardWrapper {
+  display: grid;
+  grid-template-rows: min-content 240px;
+  align-content: space-between;
+
+  max-width: 300px;
+  height: 400px;
+
+  padding: var(--spaces-xxs);
+  border-radius: var(--spaces-s);
+  box-shadow: var(--shadow-a);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--spaces-s) var(--spaces-s) 0;
+}
+
+.name {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+
+  color: var(--base-color-d);
+  font-weight: var(--font-weight-bold);
+}
+
+.index {
+  color: var(--base-color-d);
+  font-weight: var(--font-weight-bold);
+}
+
+.content {
+  height: 240px;
+
+  position: relative;
+
+  padding: var(--spaces-xs) var(--spaces-s);
+  background-color: var(--base-color-d);
+  border-radius: var(--spaces-xs);
+}
+
+.image {
+  display: block;
+  margin: auto;
+  width: 150px;
+  margin-top: -100px;
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  gap: var(--spaces-s);
+}
+
+.information {
+  display: grid;
+  grid-template-rows: repeat(2, auto) 1fr;
+  gap: var(--spaces-s);
+}
+
+.measures {
+  display: flex;
+  justify-content: center;
+}
+
+.measure {
+  padding: 0 var(--spaces-s);
+  text-align: center;
+}
+
+.measure:not(:last-child) {
+  border-right: 1px solid var(--base-color-b);
+}
+
+.measureData {
+  display: flex;
+  gap: var(--spaces-xs);
+}
+
+.measureName {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  margin-top: var(--spaces-xs);
+  color: var(--base-color-a);
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}

@@ -40,6 +40,10 @@
 
   /* Shadows */
   --shadow-a: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+  /* font weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
 }
 
 *,
