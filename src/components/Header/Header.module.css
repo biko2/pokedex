@@ -1,0 +1,21 @@
+.header {
+  padding: var(--spaces-m);
+
+  box-shadow: var(--shadow-a);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: var(--spaces-s);
+
+  max-width: var(--layout);
+
+  margin: auto;
+}
+
+.title {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: var(--font-weight-bold);
+}

@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { Icon } from "../Icon";
-import { Pokeball } from "../icons/Pokeball";
+import { Search } from "components/Icon/icons/Search";
 
 describe("Icon", () => {
   it("renders component", () => {
-    render(<Icon icon={Pokeball} />);
+    render(<Icon icon={Search} />);
 
     const icon = screen.getByRole("img");
 

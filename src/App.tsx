@@ -1,4 +1,5 @@
 import { PokemonCard } from "components/Card";
+import { Header } from "components/Header";
 
 export const App = () => {
   const cardData = {
@@ -13,9 +14,11 @@ export const App = () => {
   };
 
   return (
-    <main>
-      <h1>My Pokedex</h1>
-      <PokemonCard {...cardData} />
-    </main>
+    <>
+      <Header />
+      <main>
+        <PokemonCard {...cardData} />
+      </main>
+    </>
   );
 };
