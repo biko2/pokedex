@@ -1,31 +1,41 @@
+import { useState } from "react";
 import { PokemonCard } from "components/Card";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { Searchbar } from "components/Searchbar";
+import { Pokemon } from "core/models/Pokemon";
+import { pokemonService } from "core/services/pokemonService";
 
 export const App = () => {
-  const cardData = {
-    index: 1,
-    name: "Bulbasaur",
-    imageUrl: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-    types: ["grass", "poison"],
-    weight: 6.9,
-    height: 0.7,
-    description:
-      "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
+  const [pokemon, setPokemon] = useState<Pokemon>();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const handleSearch = async (searchValue: string) => {
+    setIsLoading(true);
+    try {
+      const searchedPokemon = await pokemonService.getPokemon(searchValue);
+      setPokemon(searchedPokemon);
+    } catch (error: unknown) {
+      setPokemon(undefined);
+    }
+
+    setIsLoading(false);
   };
 
-  const handleSearch = (searchValue: string) => {
-    console.log(searchValue);
+  const getPokemonsContent = () => {
+    if (isLoading) return <p>Loading data...</p>;
+    if (!pokemon)
+      return (
+        <p>Oops, it seems like you haven't made a good search... try again!</p>
+      );
+    return <PokemonCard {...pokemon} />;
   };
 
   return (
     <>
       <Header />
       <Searchbar onSearch={handleSearch} />
-      <main>
-        <PokemonCard {...cardData} />
-      </main>
+      <main>{getPokemonsContent()}</main>
       <Footer />
     </>
   );
