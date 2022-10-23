@@ -1,4 +1,5 @@
 import { PokemonCard } from "components/Card";
+import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { Searchbar } from "components/Searchbar";
 
@@ -25,6 +26,7 @@ export const App = () => {
       <main>
         <PokemonCard {...cardData} />
       </main>
+      <Footer />
     </>
   );
 };
