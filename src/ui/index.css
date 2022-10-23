@@ -81,3 +81,8 @@ input {
   font-size: 1.6rem;
   margin: 0;
 }
+
+input {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}

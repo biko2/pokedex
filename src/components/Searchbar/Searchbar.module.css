@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spaces-xs);
+
+  padding: var(--spaces-xs);
+
+  background-color: var(--base-color-c);
+  border-radius: var(--spaces-xs);
+  border: 1px solid var(--base-color-b);
+}
+
+.search {
+  flex-grow: 1;
+  border: none;
+}
