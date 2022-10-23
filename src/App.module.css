@@ -1,0 +1,39 @@
+.wrapper {
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--spaces-l);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: var(--spaces-l);
+
+  padding: 0 var(--spaces-m);
+  max-width: var(--layout);
+
+  margin: auto;
+}
+
+.searchWrapper {
+  position: sticky;
+  z-index: 1;
+  top: var(--spaces-l);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spaces-l);
+}
+
+.status {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}

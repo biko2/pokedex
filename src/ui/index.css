@@ -46,7 +46,7 @@
   --font-weight-bold: 600;
 
   /* Containers */
-  --layout: 991px;
+  --layout: 1200px;
 }
 
 *,
@@ -79,6 +79,7 @@ p,
 strong,
 input {
   font-size: 1.6rem;
+  line-height: 2rem;
   margin: 0;
 }
 
