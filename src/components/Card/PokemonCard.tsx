@@ -23,7 +23,9 @@ export const PokemonCard: React.FC<CardProps> = ({
   height,
   description,
 }) => {
-  const formattedIndex = `#${index.toString().padStart(3, "0")}`;
+  const formattedIndex: string = `#${index.toString().padStart(3, "0")}`;
+  const getFormattedMeasure = (measure: number): string =>
+    measure.toFixed(1).replace(".", ",");
 
   return (
     <div
@@ -51,7 +53,7 @@ export const PokemonCard: React.FC<CardProps> = ({
             <div className={styles.measure}>
               <div className={styles.measureData}>
                 <Icon icon={Weight} />
-                <p>{weight} kg</p>
+                <p>{getFormattedMeasure(weight)} kg</p>
               </div>
               <p className={styles.measureName}>Weight</p>
             </div>
@@ -59,7 +61,7 @@ export const PokemonCard: React.FC<CardProps> = ({
             <div className={styles.measure}>
               <div className={styles.measureData}>
                 <Icon icon={Height} />
-                <p>{height} m</p>
+                <p>{getFormattedMeasure(height)} m</p>
               </div>
               <p className={styles.measureName}>Height</p>
             </div>

@@ -20,8 +20,8 @@ describe("PokemonCard", () => {
     const cardTitle = screen.getByText(/bulbasaur/i);
     const cardTag = screen.getByText(/grass/i);
     const cardIndex = screen.getByText(/#001/i);
-    const cardWeight = screen.getByText(/6\.9 kg/i);
-    const cardHeight = screen.getByText(/0\.7 m/i);
+    const cardWeight = screen.getByText(/6,9 kg/i);
+    const cardHeight = screen.getByText(/0,7 m/i);
 
     expect(cardTitle).toBeInTheDocument();
     expect(cardTag).toBeInTheDocument();
