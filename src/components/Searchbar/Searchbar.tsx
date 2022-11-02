@@ -24,6 +24,7 @@ export const Searchbar: React.FC<SearchbarProps> = ({ onSearch }) => {
     <label htmlFor="searchbar" className={styles.wrapper}>
       <Icon icon={Search} />
       <input
+        aria-label="searchbar"
         autoComplete="off"
         type="search"
         name="searchbar"
