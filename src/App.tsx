@@ -44,7 +44,7 @@ export const App = () => {
         {pokemons.map((pokemon: Pokemon, index: number) => (
           <PokemonCard key={`pokemon-card-${index}`} {...pokemon} />
         ))}
-        {isLoading && <p>Loading...</p>}
+        {isLoading && <p>Loading new pokemon...</p>}
       </section>
     );
   };
