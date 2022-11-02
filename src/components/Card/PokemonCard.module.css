@@ -19,6 +19,7 @@
 }
 
 .name {
+  text-transform: capitalize;
   font-size: var(--heading-size-m);
   line-height: var(--heading-height-m);
 
