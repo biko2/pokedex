@@ -1,7 +1,7 @@
 .header {
   padding: var(--spaces-m);
 
-  box-shadow: var(--shadow-a);
+  box-shadow: var(--shadow-s);
 }
 
 .content {
@@ -15,7 +15,7 @@
 }
 
 .title {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
+  font-size: var(--heading-size-m);
+  line-height: var(--heading-height-m);
   font-weight: var(--font-weight-bold);
 }
