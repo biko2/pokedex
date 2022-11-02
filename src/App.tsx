@@ -8,7 +8,7 @@ import { pokemonService } from "core/services/pokemonService";
 
 export const App = () => {
   const [pokemon, setPokemon] = useState<Pokemon>();
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSearch = async (searchValue: string) => {
     setIsLoading(true);
@@ -24,10 +24,7 @@ export const App = () => {
 
   const getPokemonsContent = () => {
     if (isLoading) return <p>Loading data...</p>;
-    if (!pokemon)
-      return (
-        <p>Oops, it seems like you haven't made a good search... try again!</p>
-      );
+    if (!pokemon) return <p>Start searching a pokemon!</p>;
     return <PokemonCard {...pokemon} />;
   };
 
