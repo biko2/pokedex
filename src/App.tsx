@@ -4,7 +4,7 @@ export const App = () => {
   return (
     <main>
       <h1>My Pokedex</h1>
-      <Tag color="ground">Ground</Tag>
+      <Tag color="ground">ground</Tag>
     </main>
   );
 };
