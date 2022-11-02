@@ -25,9 +25,9 @@ export const Searchbar: React.FC<SearchbarProps> = ({ onSearch }) => {
     <label htmlFor="searchbar" className={styles.wrapper}>
       <Icon icon={Search} />
       <input
+        autoComplete="off"
         type="search"
         placeholder="Search a Pokemon..."
-        autoComplete="off"
         name="searchbar"
         data-testid="searchbar"
         className={styles.search}

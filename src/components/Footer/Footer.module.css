@@ -2,9 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spaces-s);
 
   padding: var(--spaces-xs);
 
   border-top: 1px solid var(--base-color-b);
+}
+
+.logo {
+  padding: 0 var(--spaces-s);
+}
+
+.logo:not(:last-child) {
+  border-right: 1px solid var(--base-color-b);
 }

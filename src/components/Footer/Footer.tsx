@@ -5,8 +5,8 @@ import pokeapiLogo from "assets/images/pokeapi-logo.svg";
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <img src={githubLogo} alt="Github logo" />
-      <img src={pokeapiLogo} alt="PokeApi logo" />
+      <img className={styles.logo} src={githubLogo} alt="Github logo" />
+      <img className={styles.logo} src={pokeapiLogo} alt="PokeApi logo" />
     </footer>
   );
 };

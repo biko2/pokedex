@@ -20,11 +20,11 @@ export const App = () => {
       );
       const newPokemons = [...pokemons, searchedPokemon];
       setPokemons(newPokemons);
-      setIsFirstSearch(false);
     } catch (error: unknown) {
-      console.log("Error...");
+      console.log("Error getting data...");
     }
 
+    setIsFirstSearch(false);
     setIsLoading(false);
   };
 
@@ -32,7 +32,7 @@ export const App = () => {
     if (isFirstSearch)
       return <p className={styles.status}>Write a pokemon name to start!</p>;
 
-    if (!pokemons)
+    if (pokemons.length === 0)
       return (
         <p className={styles.status}>
           Oops, it seems like you haven't made a good search... try again!

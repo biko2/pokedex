@@ -7,7 +7,7 @@
 
   padding: var(--spaces-xxs);
   border-radius: var(--spaces-s);
-  box-shadow: var(--shadow-a);
+  box-shadow: var(--shadow-s);
 }
 
 .header {
@@ -19,8 +19,8 @@
 }
 
 .name {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
+  font-size: var(--heading-size-m);
+  line-height: var(--heading-height-m);
 
   color: var(--base-color-d);
   font-weight: var(--font-weight-bold);
@@ -32,10 +32,6 @@
 }
 
 .content {
-  height: 240px;
-
-  position: relative;
-
   padding: var(--spaces-xs) var(--spaces-s);
   background-color: var(--base-color-d);
   border-radius: var(--spaces-xs);
@@ -80,14 +76,14 @@
 }
 
 .measureName {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  font-size: var(--text-size-xs);
+  line-height: var(--text-height-xs);
 
   margin-top: var(--spaces-xs);
   color: var(--base-color-a);
 }
 
 .description {
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  font-size: var(--text-size-xs);
+  line-height: var(--text-height-xs);
 }

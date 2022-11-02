@@ -24,11 +24,15 @@
   position: sticky;
   z-index: 1;
   top: var(--spaces-l);
+
+  max-width: 502px;
+  width: 100%;
+  margin: auto;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--spaces-l);
 }
 
@@ -36,4 +40,18 @@
   justify-self: center;
   align-self: center;
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spaces-m);
+  }
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spaces-s);
+  }
 }
