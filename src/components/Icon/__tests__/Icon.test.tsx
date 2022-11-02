@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Icon } from "../Icon";
-import { Search } from "components/Icon/icons/Search";
+import { Search } from "../icons/Search";
 
 describe("Icon", () => {
   it("renders component", () => {
