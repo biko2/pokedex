@@ -6,6 +6,8 @@
   border-radius: var(--spaces-s);
   font-weight: var(--font-weight-bold);
 
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  text-transform: capitalize;
+  font-size: var(--text-size-xs);
+  line-height: var(--text-height-xs);
+  font-weight: var(--font-weight-bold);
 }
