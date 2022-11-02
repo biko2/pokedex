@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { Searchbar } from "../Searchbar";
 
 const onSearchMock = jest.fn();
+const onButtonClickMock = jest.fn();
 
 describe("Searchbar", () => {
   it("renders component", () => {
@@ -28,5 +29,29 @@ describe("Searchbar", () => {
     userEvent.type(searchInput, "{enter}");
 
     expect(onSearchMock).toHaveBeenCalledWith("Irrelevant");
+  });
+
+  it("renders component with button", () => {
+    render(<Searchbar onSearch={onSearchMock} buttonText="irrelevantButton" />);
+
+    const button = screen.getByText("irrelevantButton");
+
+    expect(button).toBeInTheDocument();
+  });
+
+  it("sends onButtonClick event", () => {
+    render(
+      <Searchbar
+        onSearch={onSearchMock}
+        buttonText="irrelevantButton"
+        onButtonClick={onButtonClickMock}
+      />
+    );
+
+    const button = screen.getByText("irrelevantButton");
+    userEvent.click(button);
+
+    expect(button).toBeInTheDocument();
+    expect(onButtonClickMock).toHaveBeenCalled();
   });
 });

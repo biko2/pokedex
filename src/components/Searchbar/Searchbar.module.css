@@ -14,3 +14,16 @@
   flex-grow: 1;
   border: none;
 }
+
+.button {
+  padding: var(--spaces-xxs) var(--spaces-xs);
+
+  color: var(--base-color-d);
+  background-color: var(--base-color-a);
+
+  border: none;
+  border-radius: var(--radius-s);
+  font-weight: var(--font-weight-bold);
+
+  cursor: pointer;
+}

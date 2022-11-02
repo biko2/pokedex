@@ -7,6 +7,8 @@ import { Pokemon } from "core/models/Pokemon";
 import { pokemonService } from "core/services/pokemonService";
 import styles from "./App.module.css";
 
+const POKEMONS_LENGTH = 905;
+
 export const App = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -26,6 +28,11 @@ export const App = () => {
 
     setIsFirstSearch(false);
     setIsLoading(false);
+  };
+
+  const handleButtonClick = () => {
+    const randomNumber = String(Math.floor(Math.random() * POKEMONS_LENGTH));
+    handleSearch(randomNumber);
   };
 
   const getPokemonsContent = () => {
@@ -55,7 +62,11 @@ export const App = () => {
 
       <main className={styles.main}>
         <section className={styles.searchWrapper}>
-          <Searchbar onSearch={handleSearch} />
+          <Searchbar
+            onSearch={handleSearch}
+            buttonText="Random!"
+            onButtonClick={handleButtonClick}
+          />
         </section>
         {getPokemonsContent()}
       </main>

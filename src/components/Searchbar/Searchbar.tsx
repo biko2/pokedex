@@ -5,9 +5,15 @@ import styles from "./Searchbar.module.css";
 
 type SearchbarProps = {
   onSearch: (inputValue: string) => void;
+  buttonText?: string;
+  onButtonClick?: () => void;
 };
 
-export const Searchbar: React.FC<SearchbarProps> = ({ onSearch }) => {
+export const Searchbar: React.FC<SearchbarProps> = ({
+  onSearch,
+  buttonText,
+  onButtonClick,
+}) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleEnter = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -36,6 +42,14 @@ export const Searchbar: React.FC<SearchbarProps> = ({ onSearch }) => {
         onChange={handleChange}
         value={inputValue}
       />
+      {!!buttonText && (
+        <button
+          className={styles.button}
+          onClick={() => !!onButtonClick && onButtonClick()}
+        >
+          {buttonText}
+        </button>
+      )}
     </label>
   );
 };
