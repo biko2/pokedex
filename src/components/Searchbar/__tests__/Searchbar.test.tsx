@@ -9,7 +9,7 @@ describe("Searchbar", () => {
   it("renders component", () => {
     render(<Searchbar onSearch={onSearchMock} />);
 
-    const searchInput = screen.getByTestId("searchbar");
+    const searchInput = screen.getByRole("searchbox", { name: "searchbar" });
     const icon = screen.getByRole("img");
     const placeholder = searchInput.getAttribute("placeholder");
 
@@ -21,7 +21,7 @@ describe("Searchbar", () => {
   it("sends onSearch event", () => {
     render(<Searchbar onSearch={onSearchMock} />);
 
-    const searchInput = screen.getByTestId("searchbar");
+    const searchInput = screen.getByRole("searchbox", { name: "searchbar" });
 
     expect(searchInput).toBeInTheDocument();
 
